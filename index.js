@@ -487,7 +487,10 @@ prototype.buildPaths = function(apiDeclaration, tags) {
 
     if (!isValue(paths[pathString])) {
       paths[pathString] = {};
+    } else { 
+        return
     }
+
     var path = paths[pathString];
 
     this.forEach(api.operations, function(oldOperation) {
